@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Movie Name</th>
+    <th scope="col">Year of release</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let movie of movies">
+    <td scope="row">
+      <a [routerLink]="['/movies', movie.id]">{{movie.name}}</a>
+    </td>
+    <td>{{movie.year}}</td>
+  </tr>
+  </tbody>
+</table>
